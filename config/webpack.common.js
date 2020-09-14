@@ -7,7 +7,7 @@ const webpack = require('webpack');
 const isDev = process.env.NODE_ENV === 'development';
 const config = {
     entry: {
-        app: './src/index.tsx',
+        app: './src/app.tsx',
     },
     resolve: {
         extensions: [ '.tsx', '.ts', '.jsx', '.js' ],
@@ -49,7 +49,7 @@ const config = {
                     loader: 'ts-loader',
                     options: {
                         // 加快编译速度
-                        // transpileOnly: true,
+                        transpileOnly: true,
                         // 指定特定的ts编译配置，为了区分脚本的ts配置
                         configFile: path.resolve(__dirname, '../tsconfig.json')
                     }
